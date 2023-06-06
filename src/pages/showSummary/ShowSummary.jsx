@@ -21,7 +21,7 @@ const ShowSummary = () => {
         <div
           style={{
             display: "flex",
-            marginTop: "50px",
+            marginTop: "30px",
           }}
         >
           <img

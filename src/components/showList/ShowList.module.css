@@ -23,16 +23,18 @@
   background-color: transparent;
 }
 .premiered {
-  font-size: 20px;
   color: red;
+  font-size: 18px;
+  font-family: sans-serif;
   margin-top: 10px;
 }
 .premiered span {
-  font-size: 17px;
   color: #39445a;
+  font-family: monospace;
 }
 .show-name {
   font-size: 20px;
+  font-family: cursive;
   margin-top: 10px;
 }
 .view-button {

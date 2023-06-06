@@ -13,12 +13,21 @@ const ShowList = () => {
           "https://api.tvmaze.com/search/shows?q=all"
         );
         setShows(response.data);
+
+        // Save data to local storage
+        localStorage.setItem("data", JSON.stringify(response.data));
       } catch (error) {
         console.error("Error fetching shows:", error);
       }
     };
 
-    fetchShows();
+    // Check if data is already stored in local storage
+    const storedData = localStorage.getItem("data");
+    if (storedData) {
+      setShows(JSON.parse(storedData));
+    } else {
+      fetchShows();
+    }
   }, []);
 
   return (
@@ -28,7 +37,7 @@ const ShowList = () => {
           <img src={show.show.image.medium} alt="show-image" className={styles["show-image"]} />
           <p className={styles["premiered"]}>Premiered <span>{show.show.premiered}</span></p>
           <p className={styles["show-name"]}>{show.show.name}</p>
-          <Link to={`/summary/${show.show.id}`}>
+          <Link to={`/details/${show.show.id}`}>
             <button className={styles["view-button"]}>View</button>
           </Link>
         </div>

@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  background-color: #2b2b31;
+  margin-top: 80px;
+}
+.show-details-container {
+  width: 1200px;
+  min-height: 500px;
+  margin-left: 50%;
+  transform: translateY(50px) translateX(-50%);
+  background-color: #2b2b31;
+}
+.show-name {
+  font-size: 35px;
+  font-family: sans-serif;
+  color: white;
+  letter-spacing: 3px;
+}
+.show-image {
+  width: 350px;
+  height: fit-content;
+}
+.show-details-div {
+  font-size: 25px;
+  margin-left: 35px;
+}
+.show-details-div p {
+  color: white;
+}
+.show-details-div span, a {
+  color: #f66e7b;
+}
+.show-summary-text {
+  margin-top: 8px;
+}
+.book-ticket-btn {
+  width: 300px;
+  height: 50px;
+  background: linear-gradient(to right, #ff7f50, #ff4f70);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.book-ticket-btn:hover {
+  background: linear-gradient(to right, #ff4f70, #ff7f50);
+}

@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #39445a;
+  transform: translateY(120px);
 }
 .show-item {
   width: 250px;

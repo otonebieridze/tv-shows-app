@@ -31,18 +31,22 @@ const ShowList = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      {shows.map((show) => (
-        <div key={show.show.id} className={styles["show-item"]}>
-          <img src={show.show.image.medium} alt="show-image" className={styles["show-image"]} />
-          <p className={styles["premiered"]}>Premiered <span>{show.show.premiered}</span></p>
-          <p className={styles["show-name"]}>{show.show.name}</p>
-          <Link to={`/details/${show.show.id}`}>
-            <button className={styles["view-button"]}>View</button>
-          </Link>
+    <center>
+      <div className={styles.container}>
+        <div className={styles["show-list"]}>
+          {shows.map((show) => (
+            <div key={show.show.id} className={styles["show-item"]}>
+              <img src={show.show.image.medium} alt="show-image" className={styles["show-image"]} />
+              <p className={styles["premiered"]}>Premiered <span>{show.show.premiered}</span></p>
+              <p className={styles["show-name"]}>{show.show.name}</p>
+              <Link to={`/details/${show.show.id}`}>
+                <button className={styles["view-button"]}>View</button>
+              </Link>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </center>
   );
 };
 

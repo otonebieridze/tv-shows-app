@@ -19,3 +19,15 @@
 .book-ticket-btn:hover {
   background: linear-gradient(to right, #ff4f70, #ff7f50);
 }
+
+/* Media */
+@media (max-width: 350px) {
+  .modal p {
+    font-size: 16px;
+  }
+  .book-ticket-btn {
+    width: 200px;
+    height: 35px;
+    font-size: 15px;
+  }
+}

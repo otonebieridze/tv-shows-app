@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div style={{ backgroundColor: "#2b2b31" }}>
+    <div>
       <BrowserRouter>
         <Header />
         <Routes>

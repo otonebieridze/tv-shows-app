@@ -1,9 +1,18 @@
 .container {
+  max-width: 1300px;
+  min-height: 100vh;
+  background-color: #39445a;
+  border: 1px solid #39445a;
+  margin-top: 80px;
+}
+.show-list {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #39445a;
-  transform: translateY(120px);
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .show-item {
   width: 250px;

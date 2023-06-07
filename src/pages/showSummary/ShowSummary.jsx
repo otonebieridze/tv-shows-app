@@ -24,18 +24,17 @@ const ShowSummary = () => {
   return (
     <div className={styles.container}>
       <div className={styles["show-details-container"]}>
-        <h1 className={styles["show-name"]}>{show?.show.name}</h1>
-        <div
-          style={{
-            display: "flex",
-            marginTop: "30px",
-          }}
-        >
-          <img
-            src={show?.show.image.original}
-            alt="show-img"
-            className={styles["show-image"]}
-          />
+        <div className={styles["show-details-box"]}>
+          <div style={{
+            marginTop: "50px",
+          }}>
+            <h1 className={styles["show-name"]}>{show?.show.name}</h1>
+            <img
+              src={show?.show.image.original}
+              alt="show-img"
+              className={styles["show-image"]}
+            />
+          </div>
           <div className={styles["show-details-div"]}>
             <p>
               <span>

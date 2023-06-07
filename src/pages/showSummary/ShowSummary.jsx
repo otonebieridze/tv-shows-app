@@ -5,14 +5,21 @@ import styles from "./ShowSummary.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
+import BookModal from "../../components/bookModal/BookModal";
+
 const ShowSummary = () => {
   const { id } = useParams();
   const [show, setShow] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const storedData = JSON.parse(localStorage.getItem("data"));
     setShow(storedData.find((item) => item.show.id === Number(id)));
   }, []);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
 
   return (
     <div className={styles.container}>
@@ -64,10 +71,12 @@ const ShowSummary = () => {
             <p className={styles["show-summary-text"]}>
               {show?.show.summary.replace(/<[^>]+>/g, "")}
             </p>
-            <button className={styles["book-ticket-btn"]}>Book Ticket</button>
+            <button className={styles["book-ticket-btn"]} onClick={showModal}>Book Ticket</button>
           </div>
         </div>
       </div>
+
+      <BookModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} show={show} />
     </div>
   );
 };

@@ -7,14 +7,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/details/:id" element={<ShowSummary />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div style={{ backgroundColor: "#2b2b31" }}>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/details/:id" element={<ShowSummary />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 

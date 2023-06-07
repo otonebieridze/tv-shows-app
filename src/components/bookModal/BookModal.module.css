@@ -1,0 +1,21 @@
+.modal p {
+  font-size: 20px;
+}
+.modal span {
+  color: #bd0000;
+}
+.book-ticket-btn {
+  width: 250px;
+  height: 40px;
+  background: linear-gradient(to right, #ff7f50, #ff4f70);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: monospace;
+  cursor: pointer;
+  margin-top: 50px;
+}
+.book-ticket-btn:hover {
+  background: linear-gradient(to right, #ff4f70, #ff7f50);
+}
